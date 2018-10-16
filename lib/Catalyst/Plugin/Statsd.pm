@@ -1,5 +1,7 @@
 package Catalyst::Plugin::Statsd;
 
+# ABSTRACT: log Catalyst stats to statsd
+
 use Moose::Role;
 
 use POSIX qw/ ceil /;
