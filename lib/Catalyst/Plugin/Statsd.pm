@@ -10,6 +10,8 @@ use POSIX qw/ ceil /;
 
 use namespace::autoclean;
 
+our $VERSION = 'v0.1.0';
+
 around finalize => sub {
     my ( $next, $c ) = @_;
 
