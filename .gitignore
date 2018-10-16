@@ -1,0 +1,4 @@
+CatalystX-Statsd-*/
+CatalystX-Statsd-*.tar.gz
+.build/
+cpanfile.snapshot
