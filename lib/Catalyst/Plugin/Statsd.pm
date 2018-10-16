@@ -1,4 +1,4 @@
-package CatalystX::Statsd;
+package Catalyst::Plugin::Statsd;
 
 use Moose::Role;
 
@@ -36,7 +36,7 @@ around finalize => sub {
     }
 
     $c->$next;
-}
+};
 
 =head1 append:AUTHOR
 
