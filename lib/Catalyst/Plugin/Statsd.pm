@@ -6,8 +6,6 @@ use Moose::Role;
 
 use POSIX qw/ ceil /;
 
-# RECOMMEND PREREQ: Plack::Middleware::Statsd
-
 use namespace::autoclean;
 
 our $VERSION = 'v0.1.0';
