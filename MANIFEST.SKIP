@@ -10,6 +10,8 @@
 
 CatalystX-Statsd-.*\.tar\.gz
 CatalystX-Statsd-v\d+\.\d+\.\d+/
+Catalyst-Plugin-Statsd-.*\.tar\.gz
+Catalyst-Plugin-Statsd-v\d+\.\d+\.\d+/
 
 ^MYMETA\.*
 

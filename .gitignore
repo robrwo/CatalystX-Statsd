@@ -1,4 +1,6 @@
 CatalystX-Statsd-*/
 CatalystX-Statsd-*.tar.gz
+Catalyst-Plugin-Statsd-*/
+Catalyst-Plugin-Statsd-*.tar.gz
 .build/
 cpanfile.snapshot

@@ -1,6 +1,7 @@
-Revision history for CatalystX-Statsd:
+Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  - Renamed distribution to make PAUSE happy.
 
 v0.1.0    2018-10-16 22:36:52+01:00 Europe/London
   - Initial release.
