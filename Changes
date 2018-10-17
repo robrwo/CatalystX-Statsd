@@ -1,6 +1,9 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Documentation]
+  - Amended Changes file.
+
   [Other]
   - Updated metadata keywords.
 
@@ -8,4 +11,4 @@ v0.1.1    2018-10-17 09:55:46+01:00 Europe/London
   - Renamed distribution to make PAUSE happy.
 
 v0.1.0    2018-10-16 22:36:52+01:00 Europe/London
-  - Initial release.
+  - Initial release as CatalystX-Statsd.
