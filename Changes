@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.1.2    2018-10-18 21:06:39+01:00 Europe/London
   [Documentation]
   - Amended Changes file.
 
