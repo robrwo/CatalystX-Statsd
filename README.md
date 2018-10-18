@@ -30,6 +30,27 @@ __PACKAGE__->config(
 
 This plugin will log [Catalyst](https://metacpan.org/pod/Catalyst) timing statistics to statsd.
 
+# METHODS
+
+## `statsd_metric_name_filter`
+
+```
+$c->statsd_metric_name_filter( $stat_or_name );
+```
+
+This method returns the name to be used for logging stats, or `undef`
+if the metric should be ignored.
+
+If it is passed a non-arrayref, then it will stringify the argument
+and return that.
+
+If it is passed an array reference, then it assumes the argument comes
+from [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats) report and is converted into a suitable metric
+name.
+
+You can override or modify this method to filter out which metrics you
+want logged, or to change the names of the metrics.
+
 # METRICS
 
 ## `catalyst.response.time`

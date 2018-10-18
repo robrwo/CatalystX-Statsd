@@ -1,6 +1,10 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Enhancements]
+  - Added statsd_metric_name_filter method to filter/munge metric
+    names.
+
   [Documentation]
   - Added note about metrics logged.
 
