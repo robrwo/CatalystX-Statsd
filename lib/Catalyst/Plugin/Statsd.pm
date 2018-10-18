@@ -63,6 +63,18 @@ around finalize => sub {
 
 This plugin will log L<Catalyst> timing statistics to statsd.
 
+=head1 METRICS
+
+=head2 C<catalyst.response.time>
+
+This logs the Catalyst reponse time that is normally reported by
+Catalyst.  However, it is probably unnecessary since
+L<Plack::Middleware::Statsd> also logs response times.
+
+=head2 C<catalyst.stats.*.time>
+
+These are metrics generated from L<Catalyst::Stats>.
+
 =head1 KNOWN ISSUES
 
 Enabling stats will also log a table of statistics to the Catalyst
