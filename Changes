@@ -8,6 +8,8 @@ Revision history for Catalyst-Plugin-Statsd.
   [Documentation]
   - Added note about metrics logged.
 
+  - Reorganised POD within the module.
+
   [Other]
   - Explicitly require finalze method.
 

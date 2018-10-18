@@ -17,45 +17,6 @@ requires 'finalize';
 
 our $VERSION = 'v0.1.3';
 
-sub statsd_metric_name_filter {
-    my ($c, $stat) = @_;
-
-    return "$stat" unless is_plain_arrayref($stat);
-
-    my $metric = "catalyst.stats." . $stat->[1] . ".time";
-    $metric =~ s/\W+/./g;
-
-    return $metric;
-}
-
-around finalize => sub {
-    my ( $next, $c ) = @_;
-
-    if ( my $client = $c->req->env->{'psgix.monitor.statsd'} ) {
-        if ( $c->use_stats ) {
-
-            my $stat = [ -1, "catalyst.response.time", $c->stats->elapsed ];
-            my $metric = $c->statsd_metric_name_filter($stat) or next;
-
-            $client->timing_ms( "catalyst.response.time",
-                ceil( $stat->[2] * 1000 ) );
-
-            foreach my $stat ( $c->stats->report ) {
-
-                my $metric = $c->statsd_metric_name_filter($stat) or next;
-                my $timing = ceil( $stat->[2] * 1000 );
-
-                $client->timing_ms( $metric, $timing );
-
-            }
-
-        }
-
-    }
-
-    $c->$next;
-};
-
 =head1 SYNOPSIS
 
   use Catalyst qw/
@@ -108,6 +69,47 @@ L<Plack::Middleware::Statsd> also logs response times.
 =head2 C<catalyst.stats.*.time>
 
 These are metrics generated from L<Catalyst::Stats>.
+
+=cut
+
+sub statsd_metric_name_filter {
+    my ($c, $stat) = @_;
+
+    return "$stat" unless is_plain_arrayref($stat);
+
+    my $metric = "catalyst.stats." . $stat->[1] . ".time";
+    $metric =~ s/\W+/./g;
+
+    return $metric;
+}
+
+around finalize => sub {
+    my ( $next, $c ) = @_;
+
+    if ( my $client = $c->req->env->{'psgix.monitor.statsd'} ) {
+        if ( $c->use_stats ) {
+
+            my $stat = [ -1, "catalyst.response.time", $c->stats->elapsed ];
+            my $metric = $c->statsd_metric_name_filter($stat) or next;
+
+            $client->timing_ms( "catalyst.response.time",
+                ceil( $stat->[2] * 1000 ) );
+
+            foreach my $stat ( $c->stats->report ) {
+
+                my $metric = $c->statsd_metric_name_filter($stat) or next;
+                my $timing = ceil( $stat->[2] * 1000 );
+
+                $client->timing_ms( $metric, $timing );
+
+            }
+
+        }
+
+    }
+
+    $c->$next;
+};
 
 =head1 KNOWN ISSUES
 
