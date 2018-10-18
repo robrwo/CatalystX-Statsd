@@ -4,7 +4,7 @@ Catalyst::Plugin::Statsd - log Catalyst stats to statsd
 
 # VERSION
 
-version v0.1.3
+version v0.2.0
 
 # SYNOPSIS
 
