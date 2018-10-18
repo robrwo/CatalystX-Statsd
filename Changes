@@ -4,6 +4,9 @@ Revision history for Catalyst-Plugin-Statsd.
   [Documentation]
   - Amended Changes file.
 
+  [Tests]
+  - Specify a minimum version of Net::Statsd::Tiny.
+
   [Other]
   - Updated metadata keywords.
 
