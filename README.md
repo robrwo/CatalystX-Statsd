@@ -30,6 +30,18 @@ __PACKAGE__->config(
 
 This plugin will log [Catalyst](https://metacpan.org/pod/Catalyst) timing statistics to statsd.
 
+# METRICS
+
+## `catalyst.response.time`
+
+This logs the Catalyst reponse time that is normally reported by
+Catalyst.  However, it is probably unnecessary since
+[Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd) also logs response times.
+
+## `catalyst.stats.*.time`
+
+These are metrics generated from [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats).
+
 # KNOWN ISSUES
 
 Enabling stats will also log a table of statistics to the Catalyst
