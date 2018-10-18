@@ -34,10 +34,11 @@ around finalize => sub {
     if ( my $client = $c->req->env->{'psgix.monitor.statsd'} ) {
         if ( $c->use_stats ) {
 
-            my $elapsed = $c->stats->elapsed;
+            my $stat = [ -1, "catalyst.response.time", $c->stats->elapsed ];
+            my $metric = $c->statsd_metric_name_filter($stat) or next;
 
             $client->timing_ms( "catalyst.response.time",
-                ceil( $elapsed * 1000 ) );
+                ceil( $stat->[2] * 1000 ) );
 
             foreach my $stat ( $c->stats->report ) {
 
