@@ -13,6 +13,8 @@ use Ref::Util qw/ is_plain_arrayref /;
 
 use namespace::autoclean;
 
+requires 'finalize';
+
 our $VERSION = 'v0.1.3';
 
 sub statsd_metric_name_filter {
