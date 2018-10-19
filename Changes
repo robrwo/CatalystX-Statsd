@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Documentation]
+  - Added INSTALL file to the distribution.
 
 v0.2.0    2018-10-18 23:14:52+01:00 Europe/London
   [Enhancements]
