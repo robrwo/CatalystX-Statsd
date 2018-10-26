@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.3.0    2018-10-26 16:58:25+01:00 Europe/London
   [Enhancements]
   - Added the statsd_client method.
 
