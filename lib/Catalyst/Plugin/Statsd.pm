@@ -15,7 +15,7 @@ use namespace::autoclean;
 
 requires 'finalize';
 
-our $VERSION = 'v0.2.1';
+our $VERSION = 'v0.3.0';
 
 =head1 SYNOPSIS
 
