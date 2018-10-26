@@ -32,6 +32,14 @@ This plugin will log [Catalyst](https://metacpan.org/pod/Catalyst) timing statis
 
 # METHODS
 
+## `statsd_client`
+
+```
+$c->statsd_client;
+```
+
+Returns the statsd client.
+
 ## `statsd_metric_name_filter`
 
 ```

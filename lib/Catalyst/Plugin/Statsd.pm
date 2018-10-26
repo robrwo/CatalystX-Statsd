@@ -41,6 +41,20 @@ This plugin will log L<Catalyst> timing statistics to statsd.
 
 =head1 METHODS
 
+=head2 C<statsd_client>
+
+  $c->statsd_client;
+
+Returns the statsd client.
+
+=cut
+
+sub statsd_client {
+    my ($c) = @_;
+    return $c->req->env->{'psgix.monitor.statsd'};
+}
+
+
 =head2 C<statsd_metric_name_filter>
 
   $c->statsd_metric_name_filter( $stat_or_name );
@@ -86,7 +100,7 @@ sub statsd_metric_name_filter {
 around finalize => sub {
     my ( $next, $c ) = @_;
 
-    if ( my $client = $c->req->env->{'psgix.monitor.statsd'} ) {
+    if ( my $client = $c->statsd_client) {
         if ( $c->use_stats ) {
 
             my $stat = [ -1, "catalyst.response.time", $c->stats->elapsed ];

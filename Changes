@@ -1,6 +1,9 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Enhancements]
+  - Added the statsd client method.
+
   [Documentation]
   - Added INSTALL file to the distribution.
 
