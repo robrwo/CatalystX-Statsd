@@ -13,7 +13,7 @@ use Ref::Util qw/ is_plain_arrayref /;
 
 use namespace::autoclean;
 
-requires 'finalize';
+requires qw/ log_stats finalize /;
 
 our $VERSION = 'v0.4.0';
 

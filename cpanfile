@@ -1,4 +1,4 @@
-requires "Catalyst::Runtime" => "0";
+requires "Catalyst" => "5.90123";
 requires "Moose::Role" => "0";
 requires "Plack::Middleware::Statsd" => "0";
 requires "Ref::Util" => "0";
@@ -7,7 +7,7 @@ requires "perl" => "v5.8.0";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
-  requires "Catalyst" => "0";
+  requires "Catalyst" => "5.90123";
   requires "Catalyst::Controller" => "0";
   requires "Catalyst::Test" => "0";
   requires "File::Spec" => "0";
