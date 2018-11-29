@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.4.0    2018-11-29 18:59:35+00:00 Europe/London
   [Incompatabilities]
   - Catalyst v5.90123 is now required.
 
