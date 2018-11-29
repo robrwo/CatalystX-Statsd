@@ -15,7 +15,7 @@ __PACKAGE__->config(
         },
     ],
     'Plugin::Statsd' => {
-        disable_stats_report => 1,
+        disable_stats_report => 0,
     },
 );
 

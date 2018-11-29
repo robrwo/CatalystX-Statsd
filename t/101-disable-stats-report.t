@@ -7,6 +7,11 @@ use lib 't/lib';
 use Catalyst::Test 'StatsApp';
 
 my $log    = StatsApp->log;
+my $config = StatsApp->config;
+
+$config->{'Plugin::Statsd'} = {
+  disable_stats_report => 1,
+};
 
 my $res = request('/');
 
@@ -23,20 +28,14 @@ my $res = request('/');
 
 }
 
-cmp_deeply $log->msgs, [
+cmp_deeply $log->msgs,
+  [
     {
         level   => 'debug',
         message => 'Statistics enabled',
         name    => ignore(),
     },
-    {
-        level => 'info',
-        message =>
-          re('^Request took \d\.\d+s \(\d+\.\d+/s\)\n.+\n\| Action +\| Time'),
-        name => ignore(),
-    },
-
   ],
-  'logged output';
+  'logged output (no stats report)';
 
 done_testing;
