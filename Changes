@@ -6,6 +6,10 @@ Revision history for Catalyst-Plugin-Statsd.
 
   - Perl v5.10.1 or newer is required.
 
+  [Enhancements]
+  - This modifies the log_stats method, and the stats report table can
+    be disabled.
+
 v0.3.0    2018-10-26 16:58:25+01:00 Europe/London
   [Enhancements]
   - Added the statsd_client method.
