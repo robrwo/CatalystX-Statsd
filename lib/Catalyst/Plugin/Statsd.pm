@@ -2,7 +2,7 @@ package Catalyst::Plugin::Statsd;
 
 # ABSTRACT: log Catalyst stats to statsd
 
-use v5.8;
+use v5.10.1;
 
 use Moose::Role;
 

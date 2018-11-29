@@ -4,6 +4,8 @@ Revision history for Catalyst-Plugin-Statsd.
   [Incompatabilities]
   - Catalyst v5.90123 is now required.
 
+  - Perl v5.10.1 or newer is required.
+
 v0.3.0    2018-10-26 16:58:25+01:00 Europe/London
   [Enhancements]
   - Added the statsd_client method.

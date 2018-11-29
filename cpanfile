@@ -3,7 +3,7 @@ requires "Moose::Role" => "0";
 requires "Plack::Middleware::Statsd" => "0";
 requires "Ref::Util" => "0";
 requires "namespace::autoclean" => "0";
-requires "perl" => "v5.8.0";
+requires "perl" => "v5.10.1";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
