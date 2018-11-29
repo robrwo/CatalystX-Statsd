@@ -1,6 +1,9 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Tests]
+  - Require Term::Size::Any so that Catalyst logging works on some
+    systems, #1.
 
 v0.4.0    2018-11-29 18:59:35+00:00 Europe/London
   [Incompatabilities]

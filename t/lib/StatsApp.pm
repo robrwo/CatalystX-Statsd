@@ -4,6 +4,7 @@ use Catalyst qw/ Statsd -Stats=1 /;
 
 use MockStatsd;
 
+use Term::Size::Any qw();
 use Test::Log::Dispatch;  # suppress stderr log
 
 use namespace::autoclean;
