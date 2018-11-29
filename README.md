@@ -30,6 +30,28 @@ __PACKAGE__->config(
 
 This plugin will log [Catalyst](https://metacpan.org/pod/Catalyst) timing statistics to statsd.
 
+## CONFIGURATION
+
+```perl
+__PACKAGE__->config(
+
+  'Plugin::Statsd' => {
+      disable_stats_report => 0,
+  },
+
+);
+```
+
+## `disable_stats_report`
+
+Enabling stats will also log a table of statistics to the Catalyst
+log.  If you do not want this, then set `disable_stats_report`
+to true.
+
+Note that if you are modifying the `log_stats` method or using
+another plugin that does this, then this may interfere with that if
+you disable the stats report.
+
 # METHODS
 
 ## `statsd_client`
@@ -70,12 +92,6 @@ Catalyst.  However, it is probably unnecessary since
 ## `catalyst.stats.*.time`
 
 These are metrics generated from [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats).
-
-# KNOWN ISSUES
-
-Enabling stats will also log a table of statistics to the Catalyst
-log.  If you do not want this, then you will need to subclass
-[Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats) or modify your logger accordingly.
 
 # SEE ALSO
 

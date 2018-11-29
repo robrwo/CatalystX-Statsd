@@ -14,6 +14,9 @@ __PACKAGE__->config(
             client => MockStatsd->new( autoflush => 1 ),
         },
     ],
+    'Plugin::Statsd' => {
+        disable_stats_report => 1,
+    },
 );
 
 __PACKAGE__->log( Test::Log::Dispatch->new );
