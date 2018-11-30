@@ -2,6 +2,8 @@ Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
   [Tests]
+  - Fixed tests to allow missing log output name.
+
   - Added diagnostics.
 
 v0.4.1    2018-11-29 23:16:52+00:00 Europe/London

@@ -30,11 +30,12 @@ my $res = request('/');
 
 cmp_deeply $log->msgs,
   [
-    {
-        level   => 'debug',
-        message => 'Statistics enabled',
-        name    => ignore(),
-    },
+    superhashof(
+        {
+            level   => 'debug',
+            message => 'Statistics enabled',
+        }
+    ),
   ],
   'logged output (no stats report)';
 

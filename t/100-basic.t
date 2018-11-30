@@ -24,18 +24,21 @@ my $res = request('/');
 }
 
 cmp_deeply $log->msgs, [
-    {
-        level   => 'debug',
-        message => 'Statistics enabled',
-        name    => ignore(),
-    },
-    {
-        level => 'info',
-        message =>
-          re('^Request took \d\.\d+s \(\d+\.\d+/s\)\n.+\n\| Action +\| Time'),
-        name => ignore(),
-    },
+    superhashof(
+        {
+            level   => 'debug',
+            message => 'Statistics enabled',
+        }
+    ),
+    superhashof(
+        {
+            level   => 'info',
+            message => re(
+                '^Request took \d\.\d+s \(\d+\.\d+/s\)\n.+\n\| Action +\| Time'
+            ),
 
+        }
+    ),
   ],
   'logged output';
 
