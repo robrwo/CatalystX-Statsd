@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.5.0    2018-12-03 17:39:30+00:00 Europe/London
   [Enhancements]
   - disable_stats_report default is based on !$c->debug.
 
