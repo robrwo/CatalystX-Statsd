@@ -52,6 +52,12 @@ Note that if you are modifying the `log_stats` method or using
 another plugin that does this, then this may interfere with that if
 you disable the stats report.
 
+This defaults to
+
+```
+!$c->debug
+```
+
 # METHODS
 
 ## `statsd_client`

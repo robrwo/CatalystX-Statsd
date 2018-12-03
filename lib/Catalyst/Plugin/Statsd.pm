@@ -59,6 +59,10 @@ Note that if you are modifying the C<log_stats> method or using
 another plugin that does this, then this may interfere with that if
 you disable the stats report.
 
+This defaults to
+
+    !$c->debug
+
 =head1 METHODS
 
 =head2 C<statsd_client>
@@ -147,7 +151,9 @@ around log_stats => sub {
 
     }
 
-    $c->$next unless !!$config->{disable_stats_report};
+    my $disabled = $config->{disable_stats_report} // !$c->debug;
+
+    $c->$next unless $disabled;
 };
 
 =head1 SEE ALSO

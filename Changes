@@ -1,6 +1,9 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Enhancements]
+  - disable_stats_report default is based on !$c->debug.
+
   [Documentation]
   - Added more documentation about the metrics.
 
