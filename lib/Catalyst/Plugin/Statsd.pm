@@ -15,7 +15,7 @@ use namespace::autoclean;
 
 requires qw/ log_stats /;
 
-our $VERSION = 'v0.4.3';
+our $VERSION = 'v0.5.0';
 
 =head1 SYNOPSIS
 
