@@ -156,6 +156,27 @@ around log_stats => sub {
     $c->$next unless $disabled;
 };
 
+=head1 KNOWN ISSUES
+
+=head2 Custom Profiling Points
+
+If you have custom profiling points, then these will be treated as
+top-level names in the C<catalyst.stats.*> namespaces, e.g.
+
+  my $stats = $c->stats;
+  $stats->profile( begin => 'here' );
+
+  ...
+
+  $stats->profile( end => 'here' );
+
+will be logged to statsd in the C<statlyst.stats.here.time> namespace.
+
+If you do not want this, then you can work around this by prefixing
+the block name with a controller name, e.g.
+
+  $stats->profile( begin => 'controller.here' );
+
 =head1 SEE ALSO
 
 =over
