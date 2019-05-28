@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.5.1    2019-05-28 12:45:40+01:00 Europe/London
   [Documentation]
   - Documented known issue with custom profiling points.
 
