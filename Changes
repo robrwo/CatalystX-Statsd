@@ -1,6 +1,15 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Hyphens in metric names are no longer escaped to dots.
+
+    This could be considered an Incompatible Change if you were relying
+    in this behaviour.
+
+  [Documentation]
+  - Added more information abou statsd_metric_name_filter method.
+
   [Tests]
   - Added tests for profiling.
 

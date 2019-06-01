@@ -86,6 +86,10 @@ sub statsd_client {
 This method returns the name to be used for logging stats, or C<undef>
 if the metric should be ignored.
 
+Only alphanumeric characters, hyphens or underscores in namespaces are
+accepted. All other characters are converted to dots, with consecutive
+dots compressed into a single dot.
+
 If it is passed a non-arrayref, then it will stringify the argument
 and return that.
 
@@ -122,7 +126,7 @@ sub statsd_metric_name_filter {
     return "$stat" unless is_plain_arrayref($stat);
 
     my $metric = "catalyst.stats." . $stat->[1] . ".time";
-    $metric =~ s/\W+/./g;
+    $metric =~ s/[^\w\-_]+/./g;
 
     return $metric;
 }
