@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.6.0    2019-06-01 09:58:43+01:00 Europe/London
   [Bug Fixes]
   - Hyphens in metric names are no longer escaped to dots.
 
