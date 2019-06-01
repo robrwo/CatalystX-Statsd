@@ -174,7 +174,7 @@ top-level names in the C<catalyst.stats.*> namespaces, e.g.
 
   $stats->profile( end => 'here' );
 
-will be logged to statsd in the C<statlyst.stats.here.time> namespace.
+will be logged to statsd in the C<catalyst.stats.here.time> namespace.
 
 If you do not want this, then you can work around this by prefixing
 the block name with a controller name, e.g.
