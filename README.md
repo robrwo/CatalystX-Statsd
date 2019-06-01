@@ -125,7 +125,7 @@ $stats->profile( begin => 'here' );
 $stats->profile( end => 'here' );
 ```
 
-will be logged to statsd in the `statlyst.stats.here.time` namespace.
+will be logged to statsd in the `catalyst.stats.here.time` namespace.
 
 If you do not want this, then you can work around this by prefixing
 the block name with a controller name, e.g.
