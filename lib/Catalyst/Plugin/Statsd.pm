@@ -24,6 +24,8 @@ our $VERSION = 'v0.6.2';
      -Stats=1
    /;
 
+  use Net::Statsd::Tiny;
+
   __PACKAGE__->config(
     'psgi_middleware', [
         Statsd => {

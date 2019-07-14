@@ -14,6 +14,8 @@ use Catalyst qw/
    -Stats=1
  /;
 
+use Net::Statsd::Tiny;
+
 __PACKAGE__->config(
   'psgi_middleware', [
       Statsd => {

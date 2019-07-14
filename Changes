@@ -4,6 +4,8 @@ Revision history for Catalyst-Plugin-Statsd.
   [Documentation]
   - Adjusted case of ABSTRACT.
 
+  - Added missing import to SYNOPSIS.
+
 v0.6.1    2019-06-01 14:34:40+01:00 Europe/London
   [Documentation]
   - Fixed typo.
