@@ -1,6 +1,6 @@
 # NAME
 
-Catalyst::Plugin::Statsd - log Catalyst stats to statsd
+Catalyst::Plugin::Statsd - Log Catalyst stats to statsd
 
 # VERSION
 

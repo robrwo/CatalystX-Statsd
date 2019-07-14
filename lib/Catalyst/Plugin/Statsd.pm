@@ -1,6 +1,6 @@
 package Catalyst::Plugin::Statsd;
 
-# ABSTRACT: log Catalyst stats to statsd
+# ABSTRACT: Log Catalyst stats to statsd
 
 use v5.10.1;
 

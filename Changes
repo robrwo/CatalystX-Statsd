@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Documentation]
+  - Adjusted case of ABSTRACT.
 
 v0.6.1    2019-06-01 14:34:40+01:00 Europe/London
   [Documentation]
