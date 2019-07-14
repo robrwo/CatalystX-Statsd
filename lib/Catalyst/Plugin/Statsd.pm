@@ -195,6 +195,8 @@ L<Catalyst::Stats>
 
 L<Plack::Middleware::Statsd>
 
+L<Net::Statsd::Tiny>
+
 =back
 
 =head1 append:AUTHOR
