@@ -73,6 +73,8 @@ This defaults to
 
 Returns the statsd client.
 
+This is the statsd client used by L<Plack::Middleware::Statsd>.
+
 =cut
 
 sub statsd_client {

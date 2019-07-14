@@ -8,6 +8,8 @@ Revision history for Catalyst-Plugin-Statsd.
 
   - Added Net::Statsd::Tiny to SEE ALSO.
 
+  - Added info about the statsd_client method.
+
 v0.6.1    2019-06-01 14:34:40+01:00 Europe/London
   [Documentation]
   - Fixed typo.

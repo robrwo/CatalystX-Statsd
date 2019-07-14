@@ -70,6 +70,8 @@ $c->statsd_client;
 
 Returns the statsd client.
 
+This is the statsd client used by [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd).
+
 ## `statsd_metric_name_filter`
 
 ```
