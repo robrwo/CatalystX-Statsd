@@ -197,6 +197,8 @@ L<Catalyst::Stats>
 
 L<Plack::Middleware::Statsd>
 
+=item *
+
 L<Net::Statsd::Tiny>
 
 =back

@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Documentation]
+  - Fixed minor POD typo.
 
 v0.6.2    2019-07-14 14:37:43+01:00 Europe/London
   [Documentation]
