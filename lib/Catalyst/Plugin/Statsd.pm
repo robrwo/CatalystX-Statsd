@@ -112,6 +112,12 @@ This logs the Catalyst reponse time that is normally reported by
 Catalyst.  However, it is probably unnecessary since
 L<Plack::Middleware::Statsd> also logs response times.
 
+=head2 C<catalyst.sessionid>
+
+If L<Catalyst::Plugin::Session> is used, or anything that adds a
+C<sessionid> method to the context, then the session id is added as a
+set, to count the number of unique sessions.
+
 =head2 C<catalyst.stats.*.time>
 
 These are metrics generated from L<Catalyst::Stats>.
@@ -162,6 +168,18 @@ around log_stats => sub {
     my $disabled = $config->{disable_stats_report} // !$c->debug;
 
     $c->$next unless $disabled;
+};
+
+around finalize => sub {
+    my ($next, $c) = @_;
+
+    if ( (my $client = $c->statsd_client) && $c->can("sessionid")) {
+        if (my $id = $c->sessionid) {
+            $client->set_add("catalyst.sessionid", "$id");
+        }
+    }
+
+    $c->$next();
 };
 
 =head1 KNOWN ISSUES
