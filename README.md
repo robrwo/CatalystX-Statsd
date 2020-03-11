@@ -145,6 +145,14 @@ the block name with a controller name, e.g.
 $stats->profile( begin => 'controller.here' );
 ```
 
+## Large Databases When Profiling
+
+When profiling your application, the size of your stats database may
+grow quite large.
+
+Your database storage and retention settings should be adjusted
+accordingly.
+
 # SEE ALSO
 
 - [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats)
