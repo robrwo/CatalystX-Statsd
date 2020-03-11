@@ -103,6 +103,13 @@ This logs the Catalyst reponse time that is normally reported by
 Catalyst.  However, it is probably unnecessary since
 [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd) also logs response times.
 
+## `catalyst.sessionid`
+
+If [Catalyst::Plugin::Session](https://metacpan.org/pod/Catalyst::Plugin::Session) or [Plack::Middleware::Session](https://metacpan.org/pod/Plack::Middleware::Session) is
+used, or anything that adds a `sessionid` method to the context, then
+the session id is added as a set, to count the number of unique
+sessions.
+
 ## `catalyst.stats.*.time`
 
 These are metrics generated from [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats).
