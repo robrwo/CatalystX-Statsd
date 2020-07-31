@@ -3,6 +3,7 @@
 
 requires "Catalyst" => "5.90123";
 requires "Moose::Role" => "0";
+requires "POSIX" => "0";
 requires "Plack::Middleware::Statsd" => "0";
 requires "Ref::Util" => "0";
 requires "namespace::autoclean" => "0";
@@ -23,6 +24,8 @@ on 'test' => sub {
   requires "Test::More" => "0";
   requires "Test::Most" => "0";
   requires "lib" => "0";
+  requires "strict" => "0";
+  requires "warnings" => "0";
 };
 
 on 'test' => sub {
