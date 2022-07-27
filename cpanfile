@@ -4,10 +4,10 @@
 requires "Catalyst" => "5.90123";
 requires "Moose::Role" => "0";
 requires "POSIX" => "0";
-requires "Plack::Middleware::Statsd" => "0";
+requires "Plack::Middleware::Statsd" => "v0.6.0";
 requires "Ref::Util" => "0";
 requires "namespace::autoclean" => "0";
-requires "perl" => "v5.10.1";
+requires "perl" => "v5.14.0";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
