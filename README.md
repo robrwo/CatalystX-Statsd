@@ -70,7 +70,7 @@ $c->statsd_client;
 
 Returns the statsd client.
 
-This is the statsd client used by [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd).
+This is the statsd client used by [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AStatsd).
 
 ## `statsd_metric_name_filter`
 
@@ -89,7 +89,7 @@ If it is passed a non-arrayref, then it will stringify the argument
 and return that.
 
 If it is passed an array reference, then it assumes the argument comes
-from [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats) report and is converted into a suitable metric
+from [Catalyst::Stats](https://metacpan.org/pod/Catalyst%3A%3AStats) report and is converted into a suitable metric
 name.
 
 You can override or modify this method to filter out which metrics you
@@ -101,18 +101,18 @@ want logged, or to change the names of the metrics.
 
 This logs the Catalyst reponse time that is normally reported by
 Catalyst.  However, it is probably unnecessary since
-[Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd) also logs response times.
+[Plack::Middleware::Statsd](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AStatsd) also logs response times.
 
 ## `catalyst.sessionid`
 
-If [Catalyst::Plugin::Session](https://metacpan.org/pod/Catalyst::Plugin::Session) or [Plack::Middleware::Session](https://metacpan.org/pod/Plack::Middleware::Session) is
+If [Catalyst::Plugin::Session](https://metacpan.org/pod/Catalyst%3A%3APlugin%3A%3ASession) or [Plack::Middleware::Session](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3ASession) is
 used, or anything that adds a `sessionid` method to the context, then
 the session id is added as a set, to count the number of unique
 sessions.
 
 ## `catalyst.stats.*.time`
 
-These are metrics generated from [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats).
+These are metrics generated from [Catalyst::Stats](https://metacpan.org/pod/Catalyst%3A%3AStats).
 
 All non-word characters in the paths in an action are changed to dots,
 e.g. the timing for an action `/foo/bar` will be logged with the
@@ -155,9 +155,9 @@ accordingly.
 
 # SEE ALSO
 
-- [Catalyst::Stats](https://metacpan.org/pod/Catalyst::Stats)
-- [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack::Middleware::Statsd)
-- [Net::Statsd::Tiny](https://metacpan.org/pod/Net::Statsd::Tiny)
+- [Catalyst::Stats](https://metacpan.org/pod/Catalyst%3A%3AStats)
+- [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AStatsd)
+- [Net::Statsd::Tiny](https://metacpan.org/pod/Net%3A%3AStatsd%3A%3ATiny)
 
 # SOURCE
 
