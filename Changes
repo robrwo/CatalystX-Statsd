@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Documentation]
+  - Documented the Perl version support policy.
 
 v0.8.0    2022-07-27 12:36:43+01:00 Europe/London
   [Incompatable Changes]
