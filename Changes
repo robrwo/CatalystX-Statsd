@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Tests]
+  - Added required module for tests to work around broken CPAN Testers environments.
 
 v0.8.1    2023-06-08 20:06:25+01:00 Europe/London
   [Documentation]

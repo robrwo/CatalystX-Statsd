@@ -19,6 +19,7 @@ on 'test' => sub {
   requires "Moo" => "0";
   requires "Moose" => "0";
   requires "Net::Statsd::Tiny" => "v0.3.0";
+  requires "Plack::Middleware::MethodOverride" => "0";
   requires "Term::Size::Any" => "0";
   requires "Test::Log::Dispatch" => "0";
   requires "Test::More" => "0";
