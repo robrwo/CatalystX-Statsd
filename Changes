@@ -1,6 +1,8 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+
+v0.9.0    2024-07-23 19:37:56+01:00 Europe/London
   [Enhancements]
   - Internals changed to use newer Perl syntax features.
 
