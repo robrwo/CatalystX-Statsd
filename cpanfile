@@ -6,8 +6,9 @@ requires "Moose::Role" => "0";
 requires "POSIX" => "0";
 requires "Plack::Middleware::Statsd" => "v0.6.0";
 requires "Ref::Util" => "0";
+requires "experimental" => "0";
 requires "namespace::autoclean" => "0";
-requires "perl" => "v5.14.0";
+requires "perl" => "v5.20.0";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
