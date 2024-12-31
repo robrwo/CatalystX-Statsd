@@ -246,6 +246,13 @@ L<Net::Statsd::Tiny>
 The initial development of this module was sponsored by Science Photo
 Library L<https://www.sciencephoto.com>.
 
+=head1 append:BUGS
+
+=head2 Reporting Security Vulnerabilities
+
+Security issues should not be reported on the bugtracker website. Please see F<SECURITY.md> for instructions how to
+report security vulnerabilities
+
 =cut
 
 1;
