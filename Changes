@@ -15,6 +15,9 @@ Revision history for Catalyst-Plugin-Statsd.
 
   - Updated author email due to issues with cpan.org email forwarding.
 
+  [Toolchain]
+  - Remove use of Dist::Zilla::ManifestSkip plugin.
+
 v0.9.0    2024-07-23 19:37:56+01:00 Europe/London
   [Enhancements]
   - Internals changed to use newer Perl syntax features.
