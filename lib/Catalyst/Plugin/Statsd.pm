@@ -11,13 +11,14 @@ use Ref::Util qw/ is_plain_arrayref /;
 
 use experimental qw/ signatures /;
 
+# RECOMMEND PREREQ: Plack::Middleware::Statsd v0.9.0
 # RECOMMEND PREREQ: Ref::Util::XS
 
 use namespace::autoclean;
 
 requires qw/ log_stats /;
 
-our $VERSION = 'v0.9.1';
+our $VERSION = 'v0.10.0';
 
 =head1 SYNOPSIS
 
