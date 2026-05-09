@@ -12,6 +12,11 @@ requires "perl" => "v5.20.0";
 recommends "Plack::Middleware::Statsd" => "v0.9.0";
 recommends "Ref::Util::XS" => "0";
 
+on 'build' => sub {
+  requires "ExtUtils::MakeMaker" => "7.22";
+  requires "Module::Metadata" => "1.000015";
+};
+
 on 'test' => sub {
   requires "Catalyst" => "5.90123";
   requires "Catalyst::Controller" => "0";
@@ -19,7 +24,7 @@ on 'test' => sub {
   requires "File::Spec" => "0";
   requires "IO::Handle" => "0";
   requires "IPC::Open3" => "0";
-  requires "Module::Metadata" => "0";
+  requires "Module::Metadata" => "1.000015";
   requires "Moo" => "0";
   requires "Moose" => "0";
   requires "Net::Statsd::Tiny" => "v0.3.0";
@@ -51,13 +56,13 @@ on 'develop' => sub {
   requires "Pod::Coverage::TrustPod" => "0";
   requires "Pod::Markdown::Github" => "0";
   requires "Pod::Wordlist" => "0";
-  requires "Software::Security::Policy::Individual" => "0";
+  requires "Software::Security::Policy::Individual" => "0.10";
   requires "Test2::Require::AuthorTesting" => "0";
   requires "Test2::Tools::Basic" => "1.302200";
   requires "Test2::V0" => "0";
   requires "Test::CPAN::Changes" => "0.19";
   requires "Test::CPAN::Meta" => "0";
-  requires "Test::CVE" => "0.10";
+  requires "Test::CVE" => "0.11";
   requires "Test::CleanNamespaces" => "0.15";
   requires "Test::DistManifest" => "0";
   requires "Test::EOF" => "0";
