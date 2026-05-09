@@ -19,6 +19,8 @@ Revision history for Catalyst-Plugin-Statsd.
 
   - Remove the INSTALL file (since instructions are now in the README).
 
+  - Fixed typos.
+
   [Toolchain]
   - Remove use of Dist::Zilla::ManifestSkip plugin.
 

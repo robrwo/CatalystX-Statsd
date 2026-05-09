@@ -69,6 +69,7 @@ Changes for version v0.10.0 (2026-05-09)
     - Updated author email due to issues with cpan.org email forwarding.
     - Generate README with the UsefulReadme plugin.
     - Remove the INSTALL file (since instructions are now in the README).
+    - Fixed typos.
 - Toolchain
     - Remove use of Dist::Zilla::ManifestSkip plugin.
     - Stopped signing distributions, since Module::Signature is deprecated.
@@ -128,7 +129,7 @@ For more information, see [How to install CPAN modules](https://www.cpan.org/mod
 
 # SECURITY CONSIDERATIONS
 
-If the ["client"](#client) does not have a secure communications channel to the
+If the ["statsd\_client"](#statsd_client) does not have a secure communications channel to the
 statsd server, then there is the risk that information such as IP
 addresses or session ids will be leaked.
 

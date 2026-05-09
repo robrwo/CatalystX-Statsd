@@ -20,6 +20,12 @@ requires qw/ log_stats /;
 
 our $VERSION = 'v0.10.0';
 
+=begin :prelude
+
+=for stopwords statsd
+
+=end :prelude
+
 =head1 SYNOPSIS
 
   use Catalyst qw/
@@ -110,7 +116,7 @@ want logged, or to change the names of the metrics.
 
 =head2 C<catalyst.response.time>
 
-This logs the Catalyst reponse time that is normally reported by
+This logs the Catalyst response time that is normally reported by
 Catalyst.  However, it is probably unnecessary since
 L<Plack::Middleware::Statsd> also logs response times.
 
@@ -124,7 +130,7 @@ sessions.
 Note: this will only be logged if L<Plack::Middleware::Statsd> version
 v0.9.0 or later is used and configured to with the C<secure_set_key>
 option.  The actual session id will be encrypted to prevent leaking of
-a potential auth token.
+a potential authentication token.
 
 =head2 C<catalyst.stats.*.time>
 
@@ -225,7 +231,7 @@ accordingly.
 
 =head1 SECURITY CONSIDERATIONS
 
-If the L</client> does not have a secure communications channel to the
+If the L</statsd_client> does not have a secure communications channel to the
 statsd server, then there is the risk that information such as IP
 addresses or session ids will be leaked.
 
