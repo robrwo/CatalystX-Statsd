@@ -190,7 +190,7 @@ Future releases may only support Perl versions released in the last ten years.
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/CatalystX-Statsd](https://github.com/robrwo/CatalystX-Statsd)
-and may be cloned from [git://github.com/robrwo/CatalystX-Statsd.git](git://github.com/robrwo/CatalystX-Statsd.git)
+and may be cloned from [https://github.com/robrwo/CatalystX-Statsd.git](https://github.com/robrwo/CatalystX-Statsd.git)
 
 # BUGS
 
