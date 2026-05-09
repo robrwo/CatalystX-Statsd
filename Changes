@@ -1,7 +1,14 @@
 Revision history for Catalyst-Plugin-Statsd.
 
 {{$NEXT}}
+  [Security]
+  - The catalyst.sessionid metric is no longer logged unless Plack::Middleware::Statsd v0.9.0 or later is used
+    with the secure_set_key.  This is to avoid leaking session ids which might be usable as authentication tokens,
+    CVE-2026-45180.
+
   [Documentation]
+  - Added a SECURITY CONSIDERATIONS section which documents how to use the secure set logging feature.
+
   - Added a security policy.
 
 v0.9.0    2024-07-23 19:37:56+01:00 Europe/London

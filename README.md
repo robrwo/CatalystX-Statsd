@@ -110,6 +110,11 @@ used, or anything that adds a `sessionid` method to the context, then
 the session id is added as a set, to count the number of unique
 sessions.
 
+Note: this will only be logged if [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AStatsd) version
+v0.9.0 or later is used and configured to with the `secure_set_key`
+option.  The actual session id will be encrypted to prevent leaking of
+a potential auth token.
+
 ## `catalyst.stats.*.time`
 
 These are metrics generated from [Catalyst::Stats](https://metacpan.org/pod/Catalyst%3A%3AStats).
@@ -152,6 +157,23 @@ grow quite large.
 
 Your database storage and retention settings should be adjusted
 accordingly.
+
+# SECURITY CONSIDERATIONS
+
+If the ["client"](#client) does not have a secure communications channel to the
+statsd server, then there is the risk that information such as IP
+addresses or session ids will be leaked.
+
+Anything that needs to log information in a set that contains
+personally identifiable information, authentication tokens or other
+sensitive data should use the `psgix.monitor.statsd_secure_set_add`
+function instead of the client's `set_add` method, for example:
+
+```perl
+if (my $secure_set_add = $c->req->env->{'psgix.monitor.statsd_secure_set_add'}) {
+    $secure_set_add->( $c->body_param->{name_of_sheep} );
+}
+```
 
 # SUPPORT FOR OLDER PERL VERSIONS
 

@@ -121,6 +121,11 @@ used, or anything that adds a C<sessionid> method to the context, then
 the session id is added as a set, to count the number of unique
 sessions.
 
+Note: this will only be logged if L<Plack::Middleware::Statsd> version
+v0.9.0 or later is used and configured to with the C<secure_set_key>
+option.  The actual session id will be encrypted to prevent leaking of
+a potential auth token.
+
 =head2 C<catalyst.stats.*.time>
 
 These are metrics generated from L<Catalyst::Stats>.
@@ -173,15 +178,15 @@ around log_stats => sub ( $next, $c ) {
 
 around finalize => sub ( $next, $c ) {
 
-    if (my $client = $c->statsd_client) {
+    if (my $secure = $c->req->env->{'psgix.monitor.statsd_secure_set_add'}) {
 
         if ($c->can("sessionid") && (my $id = $c->sessionid)) {
-            $client->set_add("catalyst.sessionid", "$id");
+            $secure->("catalyst.sessionid", "$id");
         }
         # Plack::Middleware::Session
         elsif (my $options = $c->req->env->{'psgix.session.options'}) {
             if (my $id = $options->{id}) {
-                $client->set_add("catalyst.sessionid", "$id");
+                $secure->("catalyst.sessionid", "$id");
             }
         }
     }
@@ -217,6 +222,21 @@ grow quite large.
 
 Your database storage and retention settings should be adjusted
 accordingly.
+
+=head1 SECURITY CONSIDERATIONS
+
+If the L</client> does not have a secure communications channel to the
+statsd server, then there is the risk that information such as IP
+addresses or session ids will be leaked.
+
+Anything that needs to log information in a set that contains
+personally identifiable information, authentication tokens or other
+sensitive data should use the C<psgix.monitor.statsd_secure_set_add>
+function instead of the client's C<set_add> method, for example:
+
+    if (my $secure_set_add = $c->req->env->{'psgix.monitor.statsd_secure_set_add'}) {
+        $secure_set_add->( $c->body_param->{name_of_sheep} );
+    }
 
 =head1 SUPPORT FOR OLDER PERL VERSIONS
 

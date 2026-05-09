@@ -9,6 +9,7 @@ requires "Ref::Util" => "0";
 requires "experimental" => "0";
 requires "namespace::autoclean" => "0";
 requires "perl" => "v5.20.0";
+recommends "Plack::Middleware::Statsd" => "v0.9.0";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
@@ -21,12 +22,14 @@ on 'test' => sub {
   requires "Moose" => "0";
   requires "Net::Statsd::Tiny" => "v0.3.0";
   requires "Plack::Middleware::MethodOverride" => "0";
+  requires "Plack::Middleware::Statsd" => "v0.6.0";
   requires "Term::Size::Any" => "0";
   requires "Test::Log::Dispatch" => "0";
   requires "Test::More" => "0";
   requires "Test::Most" => "0";
   requires "lib" => "0";
   requires "strict" => "0";
+  requires "version" => "0";
   requires "warnings" => "0";
 };
 
