@@ -238,12 +238,6 @@ function instead of the client's C<set_add> method, for example:
         $secure_set_add->( $c->body_param->{name_of_sheep} );
     }
 
-=head1 SUPPORT FOR OLDER PERL VERSIONS
-
-Since v0.9.0, the this module requires Perl v5.20 or later.
-
-Future releases may only support Perl versions released in the last ten years.
-
 =head1 SEE ALSO
 
 =over
@@ -267,12 +261,17 @@ L<Net::Statsd::Tiny>
 The initial development of this module was sponsored by Science Photo
 Library L<https://www.sciencephoto.com>.
 
-=head1 append:BUGS
+=head1 prepend:SUPPORT
 
-=head2 Reporting Security Vulnerabilities
+Only the latest version of this module will be supported.
 
-Security issues should not be reported on the bugtracker website. Please see F<SECURITY.md> for instructions how to
-report security vulnerabilities
+This module requires Perl v5.20 or later.
+Future releases may only support Perl versions released in the last ten (10) years.
+
+=head1 append:SUPPORT
+
+If the bug you are reporting has security implications which make it inappropriate to send to a public issue tracker,
+then see F<SECURITY.md> for instructions how to report security vulnerabilities.
 
 =cut
 
