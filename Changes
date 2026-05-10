@@ -4,6 +4,9 @@ Revision history for Catalyst-Plugin-Statsd.
   [Security]
   - Plack::Middleware::Statsd v0.9.0 or later is now a requirement.
 
+  [Tests]
+  - Added more test diagnostics.
+
 v0.10.0   2026-05-09 23:58:18+01:00 Europe/London
   [Security]
   - The catalyst.sessionid metric is no longer logged unless Plack::Middleware::Statsd v0.9.0 or later is used

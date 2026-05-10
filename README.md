@@ -62,6 +62,8 @@ Changes for version v0.10.1 (2026-05-10)
 
 - Security
     - Plack::Middleware::Statsd v0.9.0 or later is now a requirement.
+- Tests
+    - Added more test diagnostics.
 
 See the `Changes` file for more details.
 
