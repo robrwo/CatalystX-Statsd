@@ -58,24 +58,10 @@ This defaults to
 
 # RECENT CHANGES
 
-Changes for version v0.10.0 (2026-05-09)
+Changes for version v0.10.1 (2026-05-10)
 
 - Security
-    - The catalyst.sessionid metric is no longer logged unless Plack::Middleware::Statsd v0.9.0 or later is used with the secure\_set\_key.  This is to avoid leaking session ids which might be usable as authentication tokens, CVE-2026-45180.
-- Documentation
-    - Added a SECURITY CONSIDERATIONS section which documents how to use the secure set logging feature.
-    - Added a security policy.
-    - Updated copyright year.
-    - Updated author email due to issues with cpan.org email forwarding.
-    - Generate README with the UsefulReadme plugin.
-    - Remove the INSTALL file (since instructions are now in the README).
-    - Fixed typos.
-- Toolchain
-    - Remove use of Dist::Zilla::ManifestSkip plugin.
-    - Stopped signing distributions, since Module::Signature is deprecated.
-    - Added doap.xml to the distribution.
-- Tests
-    - Added more author tests.
+    - Plack::Middleware::Statsd v0.9.0 or later is now a requirement.
 
 See the `Changes` file for more details.
 
@@ -86,7 +72,7 @@ This module lists the following modules as runtime dependencies:
 - [Catalyst](https://metacpan.org/pod/Catalyst) version 5.90123 or later
 - [Moose::Role](https://metacpan.org/pod/Moose%3A%3ARole)
 - [POSIX](https://metacpan.org/pod/POSIX)
-- [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AStatsd) version v0.6.0 or later
+- [Plack::Middleware::Statsd](https://metacpan.org/pod/Plack%3A%3AMiddleware%3A%3AStatsd) version v0.9.0 or later
 - [Ref::Util](https://metacpan.org/pod/Ref%3A%3AUtil)
 - [experimental](https://metacpan.org/pod/experimental)
 - [namespace::autoclean](https://metacpan.org/pod/namespace%3A%3Aautoclean)

@@ -4,12 +4,11 @@
 requires "Catalyst" => "5.90123";
 requires "Moose::Role" => "0";
 requires "POSIX" => "0";
-requires "Plack::Middleware::Statsd" => "v0.6.0";
+requires "Plack::Middleware::Statsd" => "v0.9.0";
 requires "Ref::Util" => "0";
 requires "experimental" => "0";
 requires "namespace::autoclean" => "0";
 requires "perl" => "v5.20.0";
-recommends "Plack::Middleware::Statsd" => "v0.9.0";
 recommends "Ref::Util::XS" => "0";
 
 on 'build' => sub {
@@ -29,7 +28,7 @@ on 'test' => sub {
   requires "Moose" => "0";
   requires "Net::Statsd::Tiny" => "v0.3.0";
   requires "Plack::Middleware::MethodOverride" => "0";
-  requires "Plack::Middleware::Statsd" => "v0.6.0";
+  requires "Plack::Middleware::Statsd" => "v0.9.0";
   requires "Term::Size::Any" => "0";
   requires "Test::Log::Dispatch" => "0";
   requires "Test::More" => "0";

@@ -21,11 +21,7 @@ my $res = request('/');
         re('^catalyst\.response\.time:\d+\|ms$'),
         re('^catalyst\.stats\.root\.base\.time:\d+\|ms$'),
         re('^catalyst\.stats\.rootx\.foo-bar_baz\.time:\d+\|ms$'),
-        (
-            version->parse( Plack::Middleware::Statsd->VERSION ) >= version->parse('v0.9.0')
-            ? re('^catalyst.sessionid:[\w\-_]+|s$')
-            : ()
-        ),
+        re('^catalyst.sessionid:[\w\-_]+|s$'),
       ),
       'expected metrics'
       or diag( explain \@MockStatsd::Data );
